@@ -5,10 +5,9 @@ class Onmetal < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/onmetal-dev/metal/releases/download/v0.0.1/onmetal-0.0.1-alpha-macos-x64.tar.gz"
-      sha256 "foo-bar"
+      url "https://github.com/onmetal-dev/metal/releases/download/v0.0.1-alpha-5/onmetal-macos-x64.tar.gz"
+      sha256 "204d8a061316f6251f7eadb0f46e62f806f68e8d349efed8c5c52c11b92db1b9"
 
-      # bun build --compile --target=bun --outfile onmetal apps/cli/src/index.ts
       def install
         bin.install "onmetal"
       end
