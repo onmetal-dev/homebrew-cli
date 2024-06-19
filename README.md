@@ -2,5 +2,7 @@
 A Hombrew tap that supplies formulae for installing Metal's CLI and others.
 
 # Installation
-brew tap onmetal-dev/homebrew-cli
-brew install onmetal
+- For installing the CLI (which provides the `metal` command in your terminal):
+```bash
+brew install onmetal-dev/tap/cli
+```
