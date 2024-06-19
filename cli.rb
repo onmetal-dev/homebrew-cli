@@ -1,4 +1,4 @@
-class Onmetal < Formula
+class Cli < Formula
   desc "The missing PaaS for Hetzner"
   homepage "https://github.com/onmetal-dev/metal"
   version "v0.0.1-alpha-8"
