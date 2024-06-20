@@ -51,3 +51,9 @@ class Cli < Formula
       end
     end
   end
+
+  test do
+    system "#{bin}/metal", "--version"
+    system "metal", "--version"
+  end
+end
