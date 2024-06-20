@@ -2,7 +2,7 @@
 class Cli < Formula
   desc "The missing PaaS for Hetzner"
   homepage "https://github.com/onmetal-dev/metal"
-  version "v0.0.1-alpha-9_16"
+  version "v0.0.1-alpha-9_15"
   base_url = "https://github.com/onmetal-dev/metal/releases/download/#{version}"
 
   # Each release of the Metal CLI contains binaries for MacOS, Linux etc compressed into
@@ -14,7 +14,7 @@ class Cli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "#{base_url}/metal-#{version}-darwin-arm64.tar.gz"
-      sha256 "77d31f1075b7ce6907af12215ee8b736d05897f00e7fe22d5388da1711b9bbf2"
+      sha256 "26c65a6414f6e27944aa054061b163e8b0d1f9c526072d643ee7ebab2eb5c2f9"
 
       def install
         bin.install "metal-#{version}-darwin-arm64" => "metal"
@@ -23,7 +23,7 @@ class Cli < Formula
 
     if Hardware::CPU.intel?
       url "#{base_url}/metal-#{version}-darwin-x64.tar.gz"
-      sha256 "e9884535120318cd7bfa042a084b23f7e36210a88997fcaf83840365aa2c9735"
+      sha256 "4e5e3e6e0f0b444e34a2ec38514c6780932a6d383cacbb0c81f668af179766df"
 
 
       def install
@@ -35,7 +35,7 @@ class Cli < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "#{base_url}/metal-#{version}-linux-arm64.tar.gz"
-      sha256 "96f096ebfecdb168017fc132c04d96f0c12008345fc8ed81abce8ec72291d951"
+      sha256 "531e596dbeddef2fe74513b747bb3c5fb37d59b62507fa223ae0fc5a829b668d"
 
       def install
         bin.install "metal-#{version}-linux-arm64" => "metal"
@@ -44,16 +44,10 @@ class Cli < Formula
 
     if Hardware::CPU.intel?
       url "#{base_url}/metal-#{version}-linux-x64.tar.gz"
-      sha256 "e45216dd1459e658fccc03b85e8f064f6e032e8d3121acc52eb88fec0c519db2"
+      sha256 "26d5ad2b269db4b60c3546c1abc1cac1f470415e54271841532fc14fa5a2e4bd"
 
       def install
         bin.install "metal-#{version}-linux-x64" => "metal"
       end
     end
   end
-
-  test do
-    system "#{bin}/metal", "--version"
-    system "metal", "--version"
-  end
-end
